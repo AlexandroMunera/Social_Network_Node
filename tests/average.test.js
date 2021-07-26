@@ -1,0 +1,20 @@
+const { average } = require('../utils/for_testing')
+
+describe.skip('average', () => {
+    test('of one value is the value itself', () => {
+        expect(average([1])).toBe(1)
+    })
+
+    test('of zero values is zero', () => {
+        expect(average([])).toBe(0)
+    })
+
+    test('of many is calculated correctly', () => {
+        expect(average([1,2,3,4,5,6])).toBe(3.5)
+    })
+
+    test('of two values is the average of the two', () => {
+        expect(average([1, 2])).toBe(1.5)
+    })
+
+})
